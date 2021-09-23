@@ -23,4 +23,15 @@ const symbol = computed(() => {
   <abbr :title="type" class="diet-icon">{{ symbol }}</abbr>
 </template>
 
-<style></style>
+<style>
+.diet-icon {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #222;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+</style>

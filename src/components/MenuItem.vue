@@ -21,17 +21,6 @@ import DietIcon from './DietIcon.vue'
 </template>
 
 <style>
-.diet-icon {
-  width: 32px;
-  height: 32px;
-  border: 1px solid #222;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-
 .menu-item-description {
   margin: 0;
 }
