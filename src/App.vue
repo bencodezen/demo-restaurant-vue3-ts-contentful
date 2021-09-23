@@ -1,17 +1,14 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
 import MainSidebar from './components/MainSidebar.vue'
+import MenuPage from './components/MenuPage.vue'
 </script>
 
 <template>
   <div class="home-grid">
     <MainSidebar />
-    <main>
-      <img alt="Vue logo" src="./assets/logo.png" />
-      <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-    </main>
+    <MenuPage />
   </div>
 </template>
 
@@ -37,8 +34,6 @@ body {
   font-family: var(--sansSerif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 
 .built-with-text {
