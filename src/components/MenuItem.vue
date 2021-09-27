@@ -1,21 +1,53 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import DietIcon from './DietIcon.vue'
+
+interface MenuItem {
+  category: string[]
+  currency: string
+  description: string
+  title: string
+  price: number
+  dietary: object
+}
+
+const props = defineProps<{
+  item: MenuItem
+}>()
+
+const priceLabel = computed(() => {
+  return props.item.currency + props.item.price
+})
+
+const visibleDietaryIcons = computed(() => {
+  const visibleIcons = []
+
+  for (const diet in props.item.dietary) {
+    if (props.item.dietary[diet]) {
+      visibleIcons.push(diet)
+    }
+  }
+
+  return visibleIcons
+})
 </script>
 
 <template>
   <section>
     <div class="menu-item-header">
-      <h3 class="menu-item-title">The Im-Pasta</h3>
-      <span class="menu-item-price">$14</span>
+      <h3 class="menu-item-title">{{ props.item.title }}</h3>
+      <span class="menu-item-price">{{ priceLabel }}</span>
       <ul class="menu-item-diet">
-        <li><DietIcon type="Vegetarian" /></li>
-        <li><DietIcon type="Vegan" /></li>
+        <li
+          v-for="diet in visibleDietaryIcons"
+          :key="`${props.item.title}-${diet}`"
+        >
+          <DietIcon :type="diet" />
+        </li>
       </ul>
     </div>
     <p class="menu-item-description">
-      This meal is pretty sus. It's the sneakiest pasta you'll ever eat, because
-      it'll surprise you with a delicious punch in the face. You'll never want
-      to vent on this one.
+      {{ props.item.description }}
     </p>
   </section>
 </template>

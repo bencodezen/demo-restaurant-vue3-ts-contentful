@@ -1,20 +1,18 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-type Diets = 'Vegetarian' | 'Vegan' | 'Pescatarian' | 'Gluten-Free'
+type Diets = 'glutenFree' | 'vegan' | 'vegetarian'
 
 const props = defineProps<{ type: Diets }>()
 
 const symbol = computed(() => {
   switch (props.type) {
-    case 'Vegetarian':
-      return 'V'
-    case 'Vegan':
-      return 'VE'
-    case 'Pescatarian':
-      return 'P'
-    case 'Gluten-Free':
+    case 'glutenFree':
       return 'GF'
+    case 'vegetarian':
+      return 'V'
+    case 'vegan':
+      return 'VE'
   }
 })
 </script>
