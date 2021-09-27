@@ -35,7 +35,7 @@ const visibleDietaryIcons = computed(() => {
 <template>
   <section class="menu-item">
     <div class="menu-item-header">
-      <h3 class="menu-item-title">{{ props.item.title }}</h3>
+      <h2 class="menu-item-title">{{ props.item.title }}</h2>
       <span class="menu-item-price">{{ priceLabel }}</span>
       <ul class="menu-item-diet">
         <li

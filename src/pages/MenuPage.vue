@@ -13,8 +13,7 @@ onMounted(async () => {
 
 <template>
   <main class="menu-page">
-    <h1>Menu</h1>
-    <h2 class="section-title">Chef's Menu</h2>
+    <h1 class="section-title">Menu</h1>
     <MenuItem v-for="item in menuData" :key="item.title" :item="item" />
   </main>
 </template>
