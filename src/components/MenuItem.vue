@@ -33,7 +33,7 @@ const visibleDietaryIcons = computed(() => {
 </script>
 
 <template>
-  <section>
+  <section class="menu-item">
     <div class="menu-item-header">
       <h3 class="menu-item-title">{{ props.item.title }}</h3>
       <span class="menu-item-price">{{ priceLabel }}</span>
@@ -53,6 +53,10 @@ const visibleDietaryIcons = computed(() => {
 </template>
 
 <style>
+.menu-item {
+  margin-bottom: 20px;
+}
+
 .menu-item-description {
   margin: 0;
 }
