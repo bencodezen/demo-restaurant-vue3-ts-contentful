@@ -16,6 +16,10 @@ import MainNav from './MainNav.vue'
 
 <style>
 .sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
   display: grid;
   align-items: center;
   grid-template-rows: 200px 1fr 75px;
