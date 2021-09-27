@@ -115,9 +115,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.built-with-text {
-  font-size: 0.8rem;
-}
+
 .diet-icon {
   width: 32px;
   height: 32px;
