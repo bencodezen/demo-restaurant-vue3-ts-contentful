@@ -5,6 +5,10 @@ const props = defineProps({
   text: {
     type: String,
     required: true
+  },
+  url: {
+    type: String,
+    required: true
   }
 })
 
@@ -15,10 +19,10 @@ const iconFileName = computed(() => {
 
 <template>
   <li class="nav-item">
-    <a href="#" class="nav-item-link">
+    <router-link :to="url" class="nav-item-link">
       <img :src="`/${iconFileName}`" alt="" />
       <span>{{ text }}</span>
-    </a>
+    </router-link>
   </li>
 </template>
 

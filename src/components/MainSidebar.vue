@@ -4,7 +4,9 @@ import MainNav from './MainNav.vue'
 
 <template>
   <aside class="sidebar">
-    <img src="/logo.svg" alt="" />
+    <router-link to="/">
+      <img src="/logo.svg" alt="" />
+    </router-link>
     <MainNav />
     <footer class="main-footer">
       <p class="built-with-text">Built with Vue 3 and Netlify</p>

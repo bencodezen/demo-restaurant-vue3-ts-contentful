@@ -5,9 +5,9 @@ import NavItem from './NavItem.vue'
 <template>
   <nav>
     <ul class="main-nav-list">
-      <NavItem text="Menu" />
-      <NavItem text="About" />
-      <NavItem text="Gallery" />
+      <NavItem text="Menu" url="/menu" />
+      <NavItem text="About" url="/about" />
+      <NavItem text="Gallery" url="/gallery" />
     </ul>
   </nav>
 </template>
