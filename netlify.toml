@@ -4,6 +4,12 @@
   functions = "netlify/functions"
   publish = "dist"
 
+[[plugins]]
+  package = "./node_modules/@netlify/demo-restaurant-sites-data/plugins/contentful"
+
+  [plugins.inputs]
+    dataDir = "public/data"
+
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
   #[[redirects]]
